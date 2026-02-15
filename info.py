@@ -15,8 +15,8 @@ def is_enabled(value, default):
 
 
 SESSION = environ.get('SESSION', 'media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
+API_ID = int(environ.get('API_ID', '20581675'))
+API_HASH = environ.get('API_HASH', '58ec6764cacb6bdb95ea08a9e4cf8b94')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -29,12 +29,12 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df5266
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://files.catbox.moe/l3nsdz.jpeg'))
 FSUB_IMG = (environ.get('FSUB_IMG', 'https://files.catbox.moe/5ddxyt.jpg')).split() 
 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '865764383').split()] 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001847367198').split()]
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001734896248'))  
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001734896248'))  
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1001789014639'))  
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002823015135')) 
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()] 
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002510859195 -1002405840644').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001728230648'))  
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001728230648'))  
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1001608201110'))  
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-100')) 
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-100') 
@@ -42,25 +42,25 @@ REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '') 
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://vkthouseef0:vkthouseef0@cluster0.322lwal.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'INFINITY MOVIES')
 
 # If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
-MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
-DATABASE_URI2 = environ.get('DATABASE_URI2', "")
+MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "True"), False) # Type True For Turn On MULTIPLE DB FUNTION 
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://vkthouseef2:vkthouseef2@cluster0.jfza1kd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/infinitymoviesgroup')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/infinity_movies2')
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/keepmessage_bot')
-UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/infinity_movies_updates')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/vkmoviegroup')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+LsnXi1i3K384Zjc1')
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Vk_Thouseef')
+UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+LsnXi1i3K384Zjc1')
 
-AUTH_CHANNEL = environ.get("AUTH_CHANNEL", "-1001759223130") # add multiple channels here, separated by single space
+AUTH_CHANNEL = environ.get("AUTH_CHANNEL", "-1001608201110") # add multiple channels here, separated by single space
 AUTH_CHANNEL = [int(ch) for ch in AUTH_CHANNEL.strip().split()] if AUTH_CHANNEL else []
 AUTH_REQ_CHANNEL = environ.get('AUTH_REQ_CHANNEL', '') # add multiple channels here, separated by single space
 AUTH_REQ_CHANNEL = [int(ch) for ch in AUTH_REQ_CHANNEL.strip().split()] if AUTH_REQ_CHANNEL else []
 
-IS_VERIFY = is_enabled('IS_VERIFY', True)
+IS_VERIFY = is_enabled('IS_VERIFY', False)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', ' -1002765580351'))
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', ' -1002765580351'))
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://files.catbox.moe/a46151.jpg")
@@ -87,7 +87,7 @@ MAX_B_TN = environ.get("MAX_B_TN", "8")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8089")
 MSG_ALRT = environ.get('MSG_ALRT', 'Share & Support Us ♥️')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/infinitymoviesgroup') 
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/') 
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
